@@ -62,7 +62,7 @@ public class ActivityClient {
 		Response response=webTarget.path("activities/" +activity.getId()).request(MediaType.APPLICATION_JSON).put(Entity.entity(activity, MediaType.APPLICATION_JSON));
 		if(response.getStatus()!=200)
 		{
-			throw new RuntimeException(response.getStatus()+"there was an error on the server");
+			 throw new RuntimeException(response.getStatus()+"there was an error on the server");
 		}
 		
 		return response.readEntity(Activity.class);
